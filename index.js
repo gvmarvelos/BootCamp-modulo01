@@ -7,11 +7,8 @@ server.use(express.json());
 const users = ["Jose", "Simone", "Luan", "Lucas"];
 
 server.use((req, res, next) => {
-  console.time("Request");
   console.log(`Método: ${req.method}; URL: ${req.url}; `);
-
   next();
-
   console.timeEnd("Request");
 });
 
